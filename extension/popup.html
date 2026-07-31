@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Activity Agent</title>
+  <style>
+    body {
+      width: 260px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 16px;
+      margin: 0;
+      color: #1f2328;
+    }
+    h1 {
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+    p.sub {
+      font-size: 12px;
+      color: #666;
+      margin: 0 0 14px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+    }
+    .status {
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .status.on { color: #0a7d32; }
+    .status.off { color: #b3261e; }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border: 1px solid #d0d5dd;
+      background: #f7f7f8;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    button:hover { background: #eee; }
+    #queueCount { font-size: 12px; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Visual AI Activity Agent</h1>
+  <p class="sub">Tracks tab/navigation/click activity locally and syncs to your local backend.</p>
+
+  <div class="row">
+    <span>Status</span>
+    <span id="statusLabel" class="status off">OFF</span>
+  </div>
+  <div class="row">
+    <span>Pending events</span>
+    <span id="queueCount">0</span>
+  </div>
+
+  <button id="toggleBtn">Turn Off</button>
+  <button id="clearBtn">Clear Local Queue</button>
+  <button id="openDashboard">Open Dashboard</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

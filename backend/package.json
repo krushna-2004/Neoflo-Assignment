@@ -1,0 +1,16 @@
+{
+  "name": "activity-agent-backend",
+  "version": "1.0.0",
+  "description": "Local backend that receives activity events from the Visual AI Activity Agent Chrome extension and stores them in SQLite.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
